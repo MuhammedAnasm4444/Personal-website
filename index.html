@@ -278,7 +278,7 @@
 
             <!-- Modal body -->
             <div class="modal-body">
-              <form id="submit-form" action="" method="POST">
+              <form id="submit-form" >
                 <div class="form-row ">
                   <div class="form-group col-md-6 ">
                     <label for="inputEmail4" class="text-info">Name</label>
@@ -381,16 +381,17 @@
               }
 
             },
-            submitHandler:(e)=>{
+            submitHandler:(form, e)=>{
+              console.log("hellllllllllllllllllll")
               e.preventDefault();
               $.ajax({
               url:"https://script.google.com/macros/s/AKfycbz0xKOdQvJ-J0zCEX-rzdBRx05gj_WOoRLtwjXjy1mYGN0LjXr-LHyfFA/exec",
-              data:$("#submit-form").serialize(),
-              method:"post",
+              data:$('form').serialize(),
+              method:"POST",
               success:function (response){
                   alert("Form submitted successfully")
                   window.location.reload()
-                  //window.location.href="https://google.com"
+                  // window.location.href="https://google.com"
               },
               error:function (err){
                   alert("Something Error")
