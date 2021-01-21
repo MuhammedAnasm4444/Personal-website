@@ -380,14 +380,10 @@
                 maxlength:150,
               }
 
-            }
-
-          })
-      $("#submit-form").submit((e)=>{
-          e.preventDefault()
-        
-          
-          $.ajax({
+            },
+            submitHandler:(e)=>{
+              e.preventDefault();
+              $.ajax({
               url:"https://script.google.com/macros/s/AKfycbz0xKOdQvJ-J0zCEX-rzdBRx05gj_WOoRLtwjXjy1mYGN0LjXr-LHyfFA/exec",
               data:$("#submit-form").serialize(),
               method:"post",
@@ -401,7 +397,39 @@
   
               }
           })
-      })
+
+            }
+
+
+          });
+      //     if($("#submit-form").valid()){
+      //       console.log("ehllo");
+      //       $("#submit-form").submit((e)=>{
+      //     e.preventDefault()
+        
+          
+          
+      // })
+      //     }
+      // $("#submit-form").submit((e)=>{
+      //     e.preventDefault()
+        
+          
+      //     $.ajax({
+      //         url:"https://script.google.com/macros/s/AKfycbz0xKOdQvJ-J0zCEX-rzdBRx05gj_WOoRLtwjXjy1mYGN0LjXr-LHyfFA/exec",
+      //         data:$("#submit-form").serialize(),
+      //         method:"post",
+      //         success:function (response){
+      //             alert("Form submitted successfully")
+      //             window.location.reload()
+      //             //window.location.href="https://google.com"
+      //         },
+      //         error:function (err){
+      //             alert("Something Error")
+  
+      //         }
+      //     })
+      // })
   </script>
 </body>
 
