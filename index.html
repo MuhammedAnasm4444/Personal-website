@@ -282,17 +282,17 @@
                 <div class="form-row ">
                   <div class="form-group col-md-6 ">
                     <label for="inputEmail4" class="text-info">Name</label>
-                    <input type="text" name="Name" class="form-control" id="inputEmail4" placeholder="">
+                    <input type="text" name="Name" class="form-control" id="inputName" placeholder="" required>
                   </div>
                   <div class="form-group col-md-6 ">
                     <label for="inputPassword4" class="text-info">Email</label>
-                    <input type="email" name="Email" class="form-control" id="inputPassword4" placeholder="">
+                    <input type="email" name="Email" class="form-control" id="inputEmail" placeholder="" required>
                   </div>
                 </div>
 
                 <div class="form-group">
                   <label for="inputAddress2" class="text-info">Message</label>
-                  <textarea class="form-control" cols="30" rows="10"></textarea>
+                  <textarea id="inputMessage" class="form-control" cols="30" rows="10" required></textarea>
                 </div>
                 <div class="form-group text-center">
                   <button type="submit" class="btn btn-info" style="width: 100%;">Send Message</button>
@@ -362,9 +362,31 @@
     crossorigin="anonymous"></script>
   <script src="https://kit.fontawesome.com/3563aadc41.js" crossorgin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
   <script>
+      $("#submit-form").validate({
+            rules:{
+              Name:{
+                required:true,
+                minlength:4,
+                maxlength:15,
+              },
+              Email:{
+                required:true,
+                email:true,
+              },
+              Message:{
+                required:true,
+                maxlength:150,
+              }
+
+            }
+
+          })
       $("#submit-form").submit((e)=>{
           e.preventDefault()
+        
+          
           $.ajax({
               url:"https://script.google.com/macros/s/AKfycbz0xKOdQvJ-J0zCEX-rzdBRx05gj_WOoRLtwjXjy1mYGN0LjXr-LHyfFA/exec",
               data:$("#submit-form").serialize(),
