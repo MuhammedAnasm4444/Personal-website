@@ -363,6 +363,20 @@
   <script src="https://kit.fontawesome.com/3563aadc41.js" crossorgin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
+
+
+  <script src="./service-worker.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+           console.log("Will the service worker register?");
+           navigator.serviceWorker.register('service-worker.js')
+             .then(function(reg){
+               console.log("Yes, it did.");
+            }).catch(function(err) {
+               console.log("No it didn't. This happened:", err)
+           });
+        }
+       </script>
   <script>
       $("#submit-form").validate({
             rules:{

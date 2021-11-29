@@ -1,0 +1,30 @@
+{
+    "short_name": "Anas",
+    "name": "Anas",
+    "theme_color": "#4A90E2",
+    "background_color": "#F7F8F9",
+    "display": "standalone",
+    "icons": [
+      {
+        "src": "images/cross.png",
+        "type": "image/png",
+        "sizes": "48x48"
+      },
+      {
+        "src": "images/cross.png",
+        "type": "image/png",
+        "sizes": "96x96"
+      },
+      {
+        "src": "images/cross.png",
+        "type": "image/png",
+        "sizes": "144x144"
+      },
+      {
+        "src": "images/cross.png",
+        "type": "image/png",
+        "sizes": "192x192"
+      }
+    ],
+    "start_url": "/?utm_source=launcher"
+  }
