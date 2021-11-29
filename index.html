@@ -367,15 +367,14 @@
 
   <script src="./service-worker.js"></script>
     <script>
-        if ('serviceWorker' in navigator) {
-           console.log("Will the service worker register?");
-           navigator.serviceWorker.register('service-worker.js')
-             .then(function(reg){
-               console.log("Yes, it did."+reg);
-            }).catch(function(err) {
-               console.log("No it didn't. This happened:", err)
-           });
-        }
+        if ("serviceWorker" in navigator) {
+  window.addEventListener("load", function() {
+    navigator.serviceWorker
+      .register("./service-worker.js")
+      .then(res => console.log("service worker registered"))
+      .catch(err => console.log("service worker not registered", err))
+  })
+}
        </script>
   <script>
       $("#submit-form").validate({
