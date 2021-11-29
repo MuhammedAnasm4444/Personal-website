@@ -6,22 +6,22 @@
     "display": "standalone",
     "icons": [
       {
-        "src": "images/cross.png",
+        "src": "images/digm.png",
         "type": "image/png",
         "sizes": "48x48"
       },
       {
-        "src": "images/cross.png",
+        "src": "images/digm.png",
         "type": "image/png",
         "sizes": "96x96"
       },
       {
-        "src": "images/cross.png",
+        "src": "images/digm.png",
         "type": "image/png",
         "sizes": "144x144"
       },
       {
-        "src": "images/cross.png",
+        "src": "images/digm.png",
         "type": "image/png",
         "sizes": "192x192"
       }
